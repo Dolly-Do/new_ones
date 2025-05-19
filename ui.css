@@ -1,0 +1,361 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f6faff;
+  color: #1a237e;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background: #1976d2;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.navbar a.btn {
+  background: #fff;
+  color: #1976d2;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-left: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar a.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.navbar a:hover, .navbar a.btn:hover {
+  background: #1565c0;
+  color: #fff;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1976d2 60%, #fff 100%);
+  color: #fff;
+  padding: 3rem 2rem;
+  min-height: 350px;
+  animation: fadeIn 1s;
+}
+.hero-content {
+  max-width: 500px;
+}
+.hero-img {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.2);
+  margin-left: 2rem;
+  animation: float 3s infinite alternate;
+}
+.cta-btn {
+  background: #fff;
+  color: #1976d2;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+  background: #1565c0;
+  color: #fff;
+}
+main {
+  padding: 2rem;
+}
+section {
+  margin-bottom: 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
+  padding: 2rem;
+  display: none;
+}
+section:target, section.animate-in {
+  display: block;
+  animation: fadeInUp 0.7s;
+}
+.dashboard-grid, .admin-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.card {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: #bbdefb;
+}
+.calendar-ui {
+  display: flex;
+  gap: 2rem;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.calendar-grid div {
+  background: #e3f2fd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0.7rem 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.calendar-grid div.selected, .calendar-grid div:hover {
+  background: #1976d2;
+  color: #fff;
+}
+.time-slots {
+  min-width: 180px;
+}
+.slots-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.slots-list .slot {
+  background: #e3f2fd;
+  border-radius: 8px;
+  padding: 0.7rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.slots-list .slot.selected, .slots-list .slot:hover {
+  background: #1976d2;
+  color: #fff;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(25, 118, 210, 0.08);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal:target, .modal.animate-in {
+  display: flex;
+  animation: fadeIn 0.5s;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 16px rgba(25, 118, 210, 0.13);
+  min-width: 320px;
+}
+input, select, textarea, button {
+  display: block;
+  width: 100%;
+  margin: 0.7rem 0;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #bbdefb;
+  font-size: 1rem;
+}
+button.btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button.btn:hover {
+  background: #1565c0;
+}
+.link {
+  color: #1976d2;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.profile-img {
+  width: 80px;
+  border-radius: 50%;
+  border: 3px solid #1976d2;
+}
+.analytics-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
+footer {
+  background: #1976d2;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+  border-radius: 16px 16px 0 0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes float {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-16px);}
+}
+/* Add at the end of main.css */
+
+/* Theme toggle button */
+.theme-toggle {
+  background: #fff;
+  color: #1976d2;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.7rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-toggle:hover {
+  background: #1976d2;
+  color: #fff;
+}
+
+/* Team section */
+.team-list {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.team-member {
+  text-align: center;
+}
+.team-member img {
+  width: 80px;
+  border-radius: 50%;
+  border: 3px solid #1976d2;
+  margin-bottom: 0.5rem;
+}
+
+/* Notifications */
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+.notification {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+/* Dark mode styles */
+body.dark {
+  background: #101624;
+  color: #e3f2fd;
+}
+body.dark .navbar,
+body.dark footer {
+  background: #0d1331;
+  color: #e3f2fd;
+}
+body.dark .navbar a,
+body.dark .navbar .logo {
+  color: #e3f2fd;
+}
+body.dark .navbar a.btn,
+body.dark .cta-btn {
+  background: #101624;
+  color: #90caf9;
+}
+body.dark .navbar a.btn-outline {
+  border-color: #90caf9;
+  color: #90caf9;
+}
+body.dark .hero {
+  background: linear-gradient(90deg, #0d1331 60%, #101624 100%);
+  color: #e3f2fd;
+}
+body.dark section,
+body.dark .modal-content {
+  background: #18213a;
+  color: #e3f2fd;
+}
+body.dark .card,
+body.dark .slots-list .slot,
+body.dark .calendar-grid div,
+body.dark .notification {
+  background: #22305b;
+  color: #90caf9;
+}
+body.dark .card.selected,
+body.dark .slots-list .slot.selected,
+body.dark .calendar-grid div.selected {
+  background: #1976d2;
+  color: #fff;
+}
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: #101624;
+  color: #e3f2fd;
+  border-color: #22305b;
+}
+body.dark .theme-toggle {
+  background: #22305b;
+  color: #90caf9;
+}
+body.dark .theme-toggle:hover {
+  background: #1976d2;
+  color: #fff;
+}
+body.dark .profile-img,
+body.dark .team-member img {
+  border-color: #90caf9;
+}
